@@ -25,6 +25,13 @@ public class WzProjObserwatorApplication {
 
 		order.notifayObserwer();
 
+		System.out.println("-------");
+		order.changeOrderStatus(OrderStatus.ODEBRANE);
+
+		System.out.println("-------");
+		order.unregisterObserwer(email);
+		order.changeOrderStatus(OrderStatus.WYSŁANE);
+
 //		SpringApplication.run(WzProjObserwatorApplication.class, args);
 	}
 }
